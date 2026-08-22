@@ -56,7 +56,7 @@ function UserInput({ onSave }) {
         </button>
       </form>
 
-      <GenderModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title={`${gender} Questions`}>
+      <GenderModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} title={`${gender} Questions`} userName={name}>
         {gender === 'male' && <MaleQuestions onSave={(data) => { setModalData(data); setIsModalOpen(false); }} />}
         {gender === 'female' && <FemaleQuestions onSave={(data) => { setModalData(data); setIsModalOpen(false); }} />}
       </GenderModal>
