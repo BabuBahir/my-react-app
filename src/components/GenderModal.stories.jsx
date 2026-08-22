@@ -14,6 +14,7 @@ export const MaleModal = {
   args: {
     isOpen: true,
     title: 'Male Questions',
+    userName: 'John',
     onClose: fn(),
     children: <MaleQuestions onSave={fn()} />,
   },
@@ -23,6 +24,7 @@ export const FemaleModal = {
   args: {
     isOpen: true,
     title: 'Female Questions',
+    userName: 'Jane',
     onClose: fn(),
     children: <FemaleQuestions onSave={fn()} />,
   },
