@@ -4,10 +4,13 @@ import './App.css'
 import Home from './components/Home'
 import AboutMe from './components/AboutMe'
 import ContactUs from './components/ContactUs'
+import UserInput from './components/UserInput'
+import UserDisplay from './components/UserDisplay'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home')
   const [count, setCount] = useState(0)
+  const [userData, setUserData] = useState(null)
 
   const renderPage = () => {
     switch (currentPage) {
@@ -17,6 +20,10 @@ function App() {
         return <AboutMe onNavigate={setCurrentPage} />
       case 'contact':
         return <ContactUs />
+      case 'input':
+        return <UserInput onSave={(data) => { setUserData(data); setCurrentPage('display'); }} />
+      case 'display':
+        return <UserDisplay data={userData} />
       default:
         return <Home count={count} setCount={setCount} />
     }
@@ -60,6 +67,24 @@ function App() {
               onClick={() => setCurrentPage('contact')}
             >
               Contact Us
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              className={currentPage === 'input' ? 'active' : ''}
+              onClick={() => setCurrentPage('input')}
+            >
+              Input
+            </button>
+          </li>
+          <li>
+            <button
+              type="button"
+              className={currentPage === 'display' ? 'active' : ''}
+              onClick={() => setCurrentPage('display')}
+            >
+              Display
             </button>
           </li>
         </ul>
