@@ -1,5 +1,9 @@
 # React + Vite
 
+[![Storybook](https://img.shields.io/badge/-Storybook-FF4785?style=flat-square&logo=storybook&logoColor=white)](https://BabuBahir.github.io/my-react-app/)
+
+> 🚀 **View Live Storybook:** [https://BabuBahir.github.io/my-react-app/](https://BabuBahir.github.io/my-react-app/)
+
 This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
 
 Currently, two official plugins are available:
